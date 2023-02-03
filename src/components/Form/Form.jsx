@@ -1,9 +1,8 @@
-import { useState } from 'react';
+
 
 export const Form = ({ onSubmit }) => {
   const handleSubmit = evt => {
     evt.preventDefault();
-    // console.log(evt.currentTarget.elements.currency.value);
     onSubmit(evt.currentTarget.elements.currency.value);
     evt.currentTarget.reset();
   };
