@@ -11,7 +11,7 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<Converter />} />
-          <Route path="/rates" element={<Rates />} />
+          <Route path="rates" element={<Rates />} />
         </Route>
       </Routes>
     </>
