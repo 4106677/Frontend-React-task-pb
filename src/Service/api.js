@@ -25,6 +25,13 @@ export const fetchExchange = value => {
   const amount = valueToArray[0];
   return fetch(
     `https://api.apilayer.com/exchangerates_data/convert?to=${to}&from=${from}&amount=${amount}`,
-    requestOptions
+    requestOptions,
+  ).then(response => response.json());
+};
+
+export const currentExchange = () => {
+  return fetch(
+    'https://api.apilayer.com/exchangerates_data/latest?symbols=USD,GBP,EUR&base=UAH',
+    requestOptions,
   ).then(response => response.json());
 };
